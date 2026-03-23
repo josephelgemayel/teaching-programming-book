@@ -69,7 +69,7 @@ book:
 #        - C17_coding-with-music.qmd
 #        - C18_social-learning-modelling.qmd
 #        - C19_genai-capabilities-and-challenges.qmd
-#        - C20_automatic-marking.qmd
+        - C20_automatic-marking.qmd
 #        - C21_programming-across-disciplines-usefulness.qmd
 #        - C22_interdisciplinary-by-design.qmd
         - C23_pair-programming-fusion.qmd
