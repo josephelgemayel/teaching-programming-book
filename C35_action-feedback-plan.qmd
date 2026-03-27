@@ -11,7 +11,6 @@ author:
     email: f.d.madsen@sms.ed.ac.uk
     affiliations: University of Edinburgh; British Geological Survey
 
-
  - name: Antonia Voigt
     email: a.voigt@surrey.ac.uk
     affiliations: University of Surrey
