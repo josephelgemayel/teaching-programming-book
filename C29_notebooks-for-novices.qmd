@@ -5,11 +5,9 @@ author:
   - name: Joseph El Gemayel
     email: joseph.el-gemayel@strath.ac.uk
     affiliations: University of Strathclyde
-author:
   - name: Arif Budiarto
     email: arif.budiarto@ed.ac.uk
     affiliations: The University of Edinburgh
-author:
   - name: William Bell
     email: william.bell@strath.ac.uk
     affiliations: University of Strathclyde
