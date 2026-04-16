@@ -20,9 +20,6 @@ keywords:
   - Code Execution Visualisation
 ---
 
-[TODO: Screenshots are a little blurry -- do you have higher-resolution versions?]
-
-
 ## Introduction
 
 Computer programming has become a core skill for many disciplines, from biology to business, as well as computer science conversion degrees that are designed for students with no prior programming experience. In many contexts, programming is used to solve domain-specific problems. Students need to learn the core programming concepts, while avoiding distractions that are associated with the nuances of particular Integrated Development Environments (IDEs) or software installation issues.
@@ -43,9 +40,7 @@ In professional Python programming environments, the developer normally creates 
 
 ![Printing 'Hello, world' with a Jupyter Notebook.](/chapters/images/C29_Figure1.png "Printing 'Hello, world' with a Jupyter Notebook."){#fig-hello-world fig-alt="A snippet of Python code using a print function to display the text 'Hello, world'."}
 
-As shown in @fig-hello-world, there is no need to create a virtual environment, install packages or open a command-line interface[^C29-ftn1]. The instant evaluation of the Python code implies that computer programming feels less abstract and more welcoming to novices.
-
-[^C29-ftn1]: [TODO - EDITOR SUGGESTION: you still need to install Jupyter, Python, and whatever packages you will use! Maybe add a disclaimer to that effect? You do talk about this later in the chapter, so you could also make reference to a future section.]
+As shown in @fig-hello-world, there is no need to create a virtual environment, install packages or open a command-line interface during everyday use. Although Python, Jupyter Notebook, and relevant packages must be installed beforehand, the environment simplifies the workflow. The instant evaluation of Python code makes programming feel less abstract and more welcoming to novices.
 
 ### Working with code in pieces
 
@@ -65,11 +60,11 @@ Programming often requires teamwork. Jupyter Notebook supports collaboration sea
 * another tests different models,  
 * a third documents the process using Markdown cells.
 
-Since [Jupyter Notebook runs in the cloud - TODO: that's not quite true, do you mean Colab specifically?], students can avoid installation issues and can work together regardless of their local software installation. Collaboration becomes natural, and the focus remains on the problem being solved rather than on technical barriers.
+[Google Colaboratory (Colab)] (https://colab.research.google.com/) supports the development of Jupyter Notebooks within a cloud platform, such that software does not need to be installed on a local PC. Collaboration becomes natural, and the focus remains on the problem being solved rather than on technical barriers.
 
 ### Using libraries with ease
 
-One of the biggest challenges for beginner computer programmers is learning how to extend a language with external libraries. When using a Python installation on a local machine, packages can be installed using the `pip` or `conda` package manager. Python `pip` packages are installed into the system or often into a virtual environment to prevent conflicts from arising. Python can also be installed using Anaconda, which includes the Python interpreter, together with many data analysis `conda` packages, and Jupyter Notebook. Due to the more comprehensive nature of the standard Anaconda installation, it is unlikely that students will have to install additional libraries, except when working with more advanced or specialised packages. For example, the NumPy library is part of the standard Anaconda installation and is present in [the cloud installation of Jupyter Notebook - TODO: what does this refer to exactly?] too. This implies that a student can import NumPy, as shown in @fig-numpy.
+One of the biggest challenges for beginner computer programmers is learning how to extend a language with external libraries. When using a Python installation on a local machine, packages can be installed using the `pip` or `conda` package manager. Python `pip` packages are installed into the system or often into a virtual environment to prevent conflicts from arising. Python can also be installed using Anaconda, which includes the Python interpreter, together with many data analysis `conda` packages, and Jupyter Notebook. Due to the more comprehensive nature of the standard Anaconda installation, it is unlikely that students will have to install additional libraries, except when working with more advanced or specialised packages. For example, the NumPy library is part of the standard Anaconda installation and is also present in the cloud installation of Jupyter Notebook, such as Google Colaboratory (Colab). This implies that a student can import NumPy, as shown in @fig-numpy.
 
 ![Using the NumPy library.](/chapters/images/C29_Figure3.png "Using the NumPy library."){#fig-numpy fig-alt="Python script using NumPy: an array of numbers is created, each number is squared, the mean of the squared values is calculated, and the original array, squared array, and mean are printed."}
 
@@ -79,17 +74,13 @@ Other example libraries useful for AI/ML which are included in Anaconda are Pand
 
 While Jupyter Notebook has become a popular entry point into programming, especially in data science and education, it includes a variety of hidden complexities that can hinder the learning process for beginners. Its interactive design and flexibility are strengths, but they also introduce subtle challenges that may not be immediately apparent to new users. This section outlines key pitfalls that often disrupt the early coding experience and offers insight into why they occur.
 
-### Non-linear execution confusion
-
-Jupyter Notebook allows users to run code cells in any order, which allows experimentation but can easily lead to confusion. Unlike regular Python programs that execute from top to bottom, Jupyter Notebook’s non-linear flow implies that variables and functions may exist or vanish depending on the sequence of cell execution. This can result in unexpected behaviours, such as errors that seem to appear “out of nowhere”, especially when revisiting or reusing Notebooks without a clear execution history. Therefore, it is necessary to encourage students to run cells sequentially from top to bottom before saving or sharing a Jupyter Notebook to maintain a consistent state.
-
-Relying on linear execution alone can discourage students from defining functions or classes, which would otherwise simplify the implementation and associated debugging. Students should be prompted to encapsulate repeated or complex code into functions or classes to improve readability, reusability, and debugging.
-
 ### Hidden kernel state and memory persistence
 
-[TODO: consider merging this with the previous section, as this is essentially the same problem again (see "code robustness" section later as well)]
+The Jupyter Notebook’s kernel maintains an active memory state throughout a session, storing all variables until the kernel is restarted. This allows code cells to be executed in any order, where the order of execution defines the memory state rather than the order within the Notebook.  Non-sequential execution implies that variables and functions may exist or vanish depending on the execution sequence.  While the Jupyter Notebook persistent state can be convenient, it obscures the underlying logic of variable scope and memory management.
 
-The Jupyter Notebook’s kernel maintains an active memory state throughout a session, storing all variables until the kernel is restarted. While this persistent state can be convenient, it obscures the underlying logic of variable scope and memory management. If the kernel crashes or is manually restarted, all stored variables are lost. Beginners often misinterpret the resulting errors as coding mistakes when in fact, they stem from changes in the kernel’s memory state. Students should be reminded to restart the kernel and rerun all cells periodically to ensure that errors are not caused by leftover variables.
+If the Jupyter Notebook kernel crashes or is manually restarted, all stored variables are lost. Beginners often misinterpret the resulting errors as coding mistakes, which actually stem from changes in the kernel’s memory state.  Students should be encouraged to run cells sequentially from top to bottom before saving or sharing a Jupyter Notebook to maintain a consistent state.  Students should be reminded to restart the kernel and rerun all cells periodically to ensure that errors are not caused by leftover variables. 
+
+Relying on linear execution alone can discourage students from defining functions or classes, which would otherwise simplify the implementation and associated debugging. Students should be prompted to encapsulate repeated or complex code into functions or classes to improve readability, reusability, and debugging.
 
 ### Markdown vs. misunderstanding code cells
 
@@ -101,17 +92,7 @@ Installing external libraries is a common task in Jupyter Notebook, but the coex
 
 ### Limited debugging capabilities
 
-[TODO: two paragraphs which are essentially the same -- please select what you want to keep]
-
-Unlike full-featured IDEs, Jupyter Notebook offers minimal support for structured debugging. Error messages are confined to individual cells, and there is no built-in mechanism for setting breakpoints or stepping through code. As a result, beginners often rely on `print()` statements or trial-and-error methods to identify bugs. This approach can be inefficient and opaque, especially when errors span multiple cells or involve complex logic. 
-
 Unlike many full-featured IDEs, Jupyter Notebook provides limited tools for debugging programs. Error messages appear only in the cell where the code is executed, and there is no built-in support for features such as breakpoints (pausing execution at a specific line) or stepping through code line by line to observe how variables change. As a result, beginners often try to find errors by adding `print()` statements or by repeatedly modifying and re-running cells. While this can work for small examples, it becomes difficult to manage when errors involve multiple cells or more complex program logic. Encourage the use of small, isolated cells for testing code, where appropriate.
-
-### Misleading sense of code robustness
-
-[TODO: this is again the same root cause as the 2 sections previously; consider merging the 3 sections and exploring the different effects in the same section]
-
-Since Jupyter Notebook allows selective cell execution, users may inadvertently skip essential steps or run cells in a non-reproducible order. This can create a misleading sense of confidence in the code’s correctness. When a Jupyter Notebook is shared or rerun from the top, previously hidden dependencies or missing initialisations may cause it to fail, revealing that the code was never truly robust to begin with. Students should be encouraged to run a Jupyter Notebook from start to finish after making changes to verify reproducibility and correctness.
 
 ### Misunderstanding of the `return` command
 
