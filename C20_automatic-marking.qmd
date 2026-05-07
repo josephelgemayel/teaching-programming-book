@@ -1,5 +1,5 @@
 ---
-title: "The use of automated marking to enhance learning"
+title: "Using automated marking in programming courses to enhance learning"
 bibliography: references.bib
 author:
   - name: Leila Shila Shafti
