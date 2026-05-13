@@ -111,7 +111,7 @@ At the University of Strathclyde, CodeRunner has been integrated into several pr
 
 ### Basic input/output evaluation
 
-CodeRunner is used to verify whether a program produces the correct output. Questions can be configured to require either a complete program or a specific function. When the output varies depending on the input, all relevant test cases are included in the question. See the Moodle XML file [`CodeRunnerBasic.xml`](/chapters/resources/PLACEHOLDER.docx) for an example. [TODO upload file]
+CodeRunner is used to verify whether a program produces the correct output. Questions can be configured to require either a complete program or a specific function. When the output varies depending on the input, all relevant test cases are included in the question. See the Moodle XML file [`CodeRunnerBasic.xml`](/chapters/resources/C20_CodeRunnerBasic.xml) for an example.
 
 ### Use of specific programming constructs
 
@@ -122,7 +122,7 @@ if 'while' not in student_answer:
         raise Exception("ERROR: You must use a while loop!")
 ```
 
-This can also be significantly more complex; see the Moodle XML file [`CodeRunnerConstruct.xml`](/chapters/resources/PLACEHOLDER.docx) for an example. [TODO: upload the actual file]
+This can also be significantly more complex; see the Moodle XML file [`CodeRunnerConstruct.xml`](/chapters/resources/C20_CodeRunnerConstruct.xml) for an example.
 
 ### Evaluation of JUnit implementation
 
@@ -130,11 +130,11 @@ In some assessments, it was necessary to evaluate students’ understanding of J
 
 ### Evaluation of SQL queries
 
-CodeRunner makes it easy to design assessments involving SQL queries. The database required for the question can be created using SQLite and uploaded via the Support Files section of CodeRunner. Each query is then tested by comparing its output against the expected result. Since the order of rows in SQL query results is not guaranteed, students should either be instructed to use an ORDER BY clause on a specific attribute, or the template script can be configured to automatically sort the output of SELECT statements before comparison. See the Moodle XML file [`CodeRunnerSQLQueries.xml`](/chapters/resources/PLACEHOLDER.docx) for an example. [TODO: upload file]
+CodeRunner makes it easy to design assessments involving SQL queries. The database required for the question can be created using SQLite and uploaded via the Support Files section of CodeRunner. Each query is then tested by comparing its output against the expected result. Since the order of rows in SQL query results is not guaranteed, students should either be instructed to use an ORDER BY clause on a specific attribute, or the template script can be configured to automatically sort the output of SELECT statements before comparison. See the Moodle XML file [`CodeRunnerSQLQueries.xml`](/chapters/resources/C20_CodeRunnerSQLQueries.xml) for an example.
 
 ### Evaluation of SQL database creation
 
-CodeRunner can also be used to assess students’ ability to design and create SQL databases. Test cases can be written to check whether tables are defined correctly, including the correct definition of primary keys, foreign keys, and data types. INSERT statements can be included in the test case to verify whether the student’s tables enforce the required constraints. Since invalid inserts produce errors instead of standard output, a script must be added to the CodeRunner template to capture and display these errors as the student’s output. See the Moodle XML file [`CodeRunnerSQLCreate.xml`](/chapters/resources/PLACEHOLDER.docx) for a simple example. [TODO: upload file]
+CodeRunner can also be used to assess students’ ability to design and create SQL databases. Test cases can be written to check whether tables are defined correctly, including the correct definition of primary keys, foreign keys, and data types. INSERT statements can be included in the test case to verify whether the student’s tables enforce the required constraints. Since invalid inserts produce errors instead of standard output, a script must be added to the CodeRunner template to capture and display these errors as the student’s output. See the Moodle XML file [`CodeRunnerSQLCreate.xml`](/chapters/resources/C20_CodeRunnerSQLCreate.xml) for a simple example.
 
 ## Conclusion
 
