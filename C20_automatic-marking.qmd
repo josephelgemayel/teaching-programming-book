@@ -17,7 +17,6 @@ keywords:
 ---
 
 
-
 In this chapter, educators with experience in automated marking for programming courses, particularly those aimed at non-Computer Science students, share their insights. The chapter introduces the concept of automated marking and provides a step-by-step tutorial on how to set up an assignment in Moodle using CodeRunner as the automated marker. We also share our practical experience of using automated marking and offer recommendations for educators who wish to implement it in their own teaching.
 
 ## Introduction
@@ -58,11 +57,11 @@ When the student submits their code, CodeRunner tests the code with a set of tes
 
 Therefore, the main step in setting up a CodeRunner question is to define the test cases (@fig-test-cases). The most important elements here are the **Standard Input** and **Expected Output**, which determine what the input and output of the program should be.
 
-![Test cases in CodeRunner.](/chapters/images/C20_Figure1.png "Test cases."){#fig-test-cases fig-alt="A screenshot of the CodeRunner 'Test Cases' configuration screen in Moodle, showing fields for standard input, expected output, and a table listing multiple test cases. Interface elements include text boxes and controls for adding or editing test cases." width=60%}
+![Test cases in CodeRunner.](/chapters/images/C20_Figure1.png "Test cases."){#fig-test-cases fig-alt="A screenshot of the CodeRunner 'Test Cases' configuration screen in Moodle, showing fields for standard input, expected output, and a table listing multiple test cases. Interface elements include text boxes and controls for adding or editing test cases." }
 
 In addition to test cases, there are many adjustments that can be made, as can be seen in @fig-config. The most important ones --- Question type, Precheck, Check and Penalty, Customization, Template, and Support Files --- are described in this section. Other options are also available in CodeRunner, and we recommend consulting the [CodeRunner documentation](https://trampgeek.github.io/moodle-qtype_coderunner/) for detailed information.
 
-![CodeRunner configuration.](/chapters/images/C20_Figure2.png "CodeRunner configuration."){#fig-config fig-alt="A screenshot of the CodeRunner question configuration panel in Moodle, displaying various settings such as question type, precheck, check and penalty options, customisation, template, and support files." width=60%}
+![CodeRunner configuration.](/chapters/images/C20_Figure2.png "CodeRunner configuration."){#fig-config fig-alt="A screenshot of the CodeRunner question configuration panel in Moodle, displaying various settings such as question type, precheck, check and penalty options, customisation, template, and support files."}
 
 Once the question is configured, it can be previewed and tested like any other quiz in Moodle. It is strongly recommended that, after the quiz is completed by students, the submission is reviewed for common errors and misconfigurations. This allows you to readjust the questions for the next cohort.
 
@@ -84,7 +83,7 @@ Once the question is configured, it can be previewed and tested like any other q
 
 **Recommendation:** Using the Check button gives the student the opportunity to learn from their mistakes and improve their submission. However, depending on the assignment, you may want to hide this button and allow only one attempt.
 
-![Answer form.](/chapters/images/C20_Figure3.png "Answer form."){#fig-answer fig-alt="A screenshot of the student-facing answer form in CodeRunner, showing a programming answer input box along with Precheck and Check buttons beneath it." width=50%}
+![Answer form.](/chapters/images/C20_Figure3.png "Answer form."){#fig-answer fig-alt="A screenshot of the student-facing answer form in CodeRunner, showing a programming answer input box along with Precheck and Check buttons beneath it." }
 
 ### Customisation
 
@@ -146,8 +145,6 @@ Automated marking is particularly valuable for students who find it difficult to
 It is also especially beneficial for students from non-computing disciplines who are learning programming as a secondary skill. Without feedback, many of these students struggle to notice errors in their code, which can lead to misunderstanding. Automated marking ensures that even formative exercises provide clear guidance, helping students gain confidence and progress more effectively.
 
 Finally, the high level of customisation offered by tools such as CodeRunner allows educators to design assessments ranging from simple input and output checks to more advanced tasks, such as evaluating specific programming constructs or features, code structure and style, or database creation. This adaptability makes automated marking a powerful tool for supporting diverse learning objectives.
-
-
 
 ::: {.content-visible when-format="html" unless-format="epub"}
 
